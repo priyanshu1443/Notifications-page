@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap');
+
+:root {
+  --red: hsl(1, 90%, 64%);
+  --blue: hsl(219, 85%, 26%);
+  --white: hsl(0, 0%, 100%);
+  --very-light-grayish-blue: hsl(210, 60%, 98%);
+  --light-grayish-blue1: hsl(211, 68%, 94%);
+  --light-grayish-blue2: hsl(205, 33%, 90%);
+  --grayish-blue: hsl(219, 14%, 63%);
+  --dark-grayish-blue: hsl(219, 12%, 42%);
+  --very-dark-blue: hsl(224, 21%, 14%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: var(--very-light-grayish-blue);
+  font-size: 62.5%;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+#notification_area {
+  background-color: var(--white);
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  width: 65rem;
+  height: 95%;
+  box-shadow: 1px 1px 10px 2px var(--light-grayish-blue2);
+  border-radius: .8rem;
+  padding: 1rem;
+  overflow: hidden;
+}
+
+#notification_area #top_heading {
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#notification_area #top_heading div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#notification_area #top_heading div h1 {
+  margin-right: 1rem;
+  font-size: 2.5rem;
+  color: var(--very-dark-blue);
+}
+
+#notification_area #top_heading div span {
+  background-color: var(--blue);
+  width: 3rem;
+  height: 3rem;
+  border-radius: .4rem;
+  overflow: hidden;
+  font-size: 1.6rem;
+  line-height: 3rem;
+  text-align: center;
+  font-weight: 800;
+  color: var(--white);
+}
+
+#notification_area #top_heading p {
+  font-size: 1.6rem;
+  color: var(--dark-grayish-blue);
+  cursor: pointer;
+  font-weight: 500;
+}
+
+#notification_area #top_heading p:hover {
+  color: var(--blue);
+}
+
+#notification_area #notifications {
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+#notification_area #notifications .notification:nth-child(4) {
+  background: rgb(255, 255, 255);
+}
+
+#notification_area #notifications .notification {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  background: var(--very-light-grayish-blue);
+}
+
+
+#notifications .notification:nth-child(4) img {
+  align-self: flex-start;
+}
+
+#notifications .notification img {
+  width: 4rem;
+}
+
+#notifications .notification .msg_img {
+  cursor: pointer;
+}
+
+#notifications .notification div {
+  width: 100%;
+  margin-left: 2rem;
+}
+
+#notifications .notification div .msg_head {
+  font-size: 1.6rem;
+  margin-bottom: .7rem;
+  color: var(--dark-grayish-blue);
+  font-weight: 500;
+}
+
+#notifications .notification div .msgtime {
+  font-size: 1.5rem;
+  color: var(--dark-grayish-blue);
+  font-weight: 500;
+}
+
+#notifications .notification div .msg {
+  border: 1.5px solid var(--grayish-blue);
+  font-size: 1.6rem;
+  padding: 2rem;
+  margin-top: 2rem;
+  line-height: 1.8rem;
+  color: var(--dark-grayish-blue);
+  font-weight: 500;
+  border-radius: 5px;
+}
+
+#notifications .notification div .msg:hover {
+  background: var(--light-grayish-blue1);
+  border: none;
+  cursor: pointer;
+}
+
+#notifications .notification div .name {
+  color: var(--very-dark-blue);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+#notifications .notification div .name:hover {
+  color: var(--blue);
+}
+
+#notifications .notification div .highlight_msg {
+  color: var(--dark-grayish-blue);
+  font-weight: 700;
+}
+
+#notifications .notification div .highlight_msg:hover {
+  color: var(--blue);
+  cursor: pointer;
+}
+
+#notifications .notification div .circle {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--red);
+  opacity: 0.5;
+}
+
+@media(max-width:768px) {
+  html {
+    font-size: 56.25%;
+  }
+
+  #notification_area {
+    width: 100vw;
+    height: 100vh;
+  }
+}
+
+@media(max-width:481px) {
+  html {
+    font-size: 50%;
+  }
+}
